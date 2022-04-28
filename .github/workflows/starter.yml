@@ -10,6 +10,12 @@ on:
       - reopened
   schedule:
     - cron: '11 11 * * 5'
+  workflow_dispatch:
+    inputs:
+      homedrive:
+        description: 'Environment to run tests against'
+        type: string
+        required: true 
     
 jobs:
   job1:
