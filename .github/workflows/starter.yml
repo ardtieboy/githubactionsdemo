@@ -1,0 +1,19 @@
+name: Starter Workflow
+
+on:
+  push:
+    branches:
+      - main
+  issues: 
+    types: 
+      - openend
+      - reopened
+  schedule:
+    - cron: '11 11 * * 5'
+    
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo "Hello world"
