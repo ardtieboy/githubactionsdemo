@@ -1,0 +1,24 @@
+name: s workflow demo 2
+
+on:
+  push:
+    branches:
+      - main
+      
+workflow_dispatch:
+
+jobs:
+  job1:
+    name: This is a job 
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo "hello NDC portoooo"
+      - name: Execute Hello world"
+        run: |
+          import platform
+          
+          print(platform.platform())
+        shell: python
+      
+      - name: mvn
